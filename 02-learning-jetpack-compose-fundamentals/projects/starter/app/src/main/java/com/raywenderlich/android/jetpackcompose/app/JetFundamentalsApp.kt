@@ -44,16 +44,16 @@ import com.raywenderlich.android.jetpackcompose.screens.*
 
 @Composable
 fun JetFundamentalsApp() {
-  Surface(color = MaterialTheme.colors.background) {
-    Crossfade(targetState = JetFundamentalsRouter.currentScreen) { screenState ->
-      when (screenState.value) {
-        is Screen.Navigation -> NavigationScreen()
-        is Screen.Text -> TextScreen()
-        is Screen.TextField -> TextFieldScreen()
-        is Screen.Buttons -> ExploreButtonsScreen()
-        is Screen.ProgressIndicator -> ProgressIndicatorScreen()
-        is Screen.AlertDialog -> AlertDialogScreen()
-      }
+    Surface(color = MaterialTheme.colors.background) {
+        Crossfade(targetState = JetFundamentalsRouter.currentScreen) { screenState ->
+            when (screenState.value) {
+                is Screen.Navigation -> NavigationScreen()
+                is Screen.Text -> TextScreen()
+                is Screen.TextField -> TextFieldScreen()
+                is Screen.Buttons -> ExploreButtonsScreen()
+                is Screen.ProgressIndicator -> ProgressIndicatorScreen()
+                is Screen.AlertDialog -> AlertDialogScreen()
+            }
+        }
     }
-  }
 }
