@@ -48,6 +48,8 @@ import com.raywenderlich.android.jetnotes.ui.components.Note
 import com.raywenderlich.android.jetnotes.viewmodel.MainViewModel
 import com.raywenderlich.android.jetnotes.viewmodel.MainViewModelFactory
 import kotlinx.coroutines.launch
+import com.raywenderlich.android.jetnotes.ui.screens.NotesScreen
+
 
 /**
  * Main activity for the app.
@@ -66,7 +68,8 @@ class MainActivity : AppCompatActivity() {
 
     setContent {
       JetNotesTheme {
-        val coroutineScope = rememberCoroutineScope()
+        NotesScreen(viewModel = viewModel)
+        /*val coroutineScope = rememberCoroutineScope()
         val scaffoldState: ScaffoldState = rememberScaffoldState()
 
         Scaffold(
@@ -84,7 +87,7 @@ class MainActivity : AppCompatActivity() {
           content = {
             Note()
           }
-        )
+        )*/
       }
     }
   }
